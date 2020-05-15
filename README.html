@@ -1,0 +1,33 @@
+<!doctype html>
+
+<script>
+
+async function start() { 
+let url = await fetch('https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'); 
+let data = await url.json();
+
+let text1 = document.createElement("p");
+text1.innerHTML = data.copyright;
+document.body.append(text1);
+
+let image = document.createElement("img");
+image.src = data.url;
+image.width = "500";
+image.height = "500";
+document.body.append(image);
+
+let text2 = document.createElement("p");
+text2.innerHTML = data.explanation;
+document.body.append(text2);
+} 
+ 
+start();
+	
+</script>
+
+</html>
+
+Ответы на вопросы:
+1. Основной смысл изученной технологии заключается в возможности обмена данными между пользовательским приложением, осуществляющим доступ к веб-ресурсам) и веб-сервером. Например, нам надо, чтобы на сервер поступала информация о новом зарегестрированном пользователи в соц.сети, для этого воспользуемся объектом FormData. Так же для отправки заданий (что актуально в наше время). Объект типа URLSearchParamЫ предоставляет удобные методы для работы с параметрами. Так же при помощи изученных технологий можно отслеживать загрузку файлов. 
+2. Изученные технологии я бы применила при создании сайта для подготовки к экзаменам. 
+3. Данные технологии были применены при создании сайта https://e.sfu-kras.ru Так же одним из многих методов, является Fetch, который использовался при создания мессенджера WhatsApp.
